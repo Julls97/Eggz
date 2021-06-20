@@ -221,15 +221,28 @@ public static class Utility {
 		return list.ToArray();
 	}
 
+	public static void SetRaycastTarget(this Component component, bool isRaycastTarget) {
+		IRaycastTargetAdapter adapter = null;
+			
+		if (component is Image image) adapter = new ImageAdapter(image);
+		if (component is Text text) adapter = new TextAdapter(text);
+		if (component is TextMeshProUGUI textMeshProUgui) adapter = new TextMeshProUGUIAdapter(textMeshProUgui);
+		if (component is TextMeshPro textMeshPro) adapter = new TextMeshProAdapter(textMeshPro);
+			
+		if (adapter == null) return;
+		
+		adapter.RaycastTarget = isRaycastTarget;
+	}
+	
 	public static void SetAlpha(this Component component, float alpha) {
 		IColorAdapter adapter = null;
 			
-		if (component is Image image) adapter = new ImageColorAdapter(image);
-		if (component is SpriteRenderer sRenderer) adapter = new SpriteRendererColorAdapter(sRenderer);
-		if (component is MeshRenderer mRenderer) adapter = new MeshRendererColorAdapter(mRenderer);
-		if (component is Text text) adapter = new TextColorAdapter(text);
-		if (component is TextMeshProUGUI textMeshProUgui) adapter = new TextMeshProUGUIColorAdapter(textMeshProUgui);
-		if (component is TextMeshPro textMeshPro) adapter = new TextMeshProColorAdapter(textMeshPro);
+		if (component is Image image) adapter = new ImageAdapter(image);
+		if (component is SpriteRenderer sRenderer) adapter = new SpriteRendererAdapter(sRenderer);
+		if (component is MeshRenderer mRenderer) adapter = new MeshRendererAdapter(mRenderer);
+		if (component is Text text) adapter = new TextAdapter(text);
+		if (component is TextMeshProUGUI textMeshProUgui) adapter = new TextMeshProUGUIAdapter(textMeshProUgui);
+		if (component is TextMeshPro textMeshPro) adapter = new TextMeshProAdapter(textMeshPro);
 			
 		if (adapter == null) return;
 
@@ -241,12 +254,12 @@ public static class Utility {
 	public static Coroutine FadeAlpha(MonoBehaviour caller, Component component, float speed, float value, float waitSecond = 0f, Action action = null) {
 		IColorAdapter adapter = null;
 			
-		if (component is Image image) adapter = new ImageColorAdapter(image);
-		if (component is SpriteRenderer sRenderer) adapter = new SpriteRendererColorAdapter(sRenderer);
-		if (component is MeshRenderer mRenderer) adapter = new MeshRendererColorAdapter(mRenderer);
-		if (component is Text text) adapter = new TextColorAdapter(text);
-		if (component is TextMeshProUGUI textMeshProUgui) adapter = new TextMeshProUGUIColorAdapter(textMeshProUgui);
-		if (component is TextMeshPro textMeshPro) adapter = new TextMeshProColorAdapter(textMeshPro);
+		if (component is Image image) adapter = new ImageAdapter(image);
+		if (component is SpriteRenderer sRenderer) adapter = new SpriteRendererAdapter(sRenderer);
+		if (component is MeshRenderer mRenderer) adapter = new MeshRendererAdapter(mRenderer);
+		if (component is Text text) adapter = new TextAdapter(text);
+		if (component is TextMeshProUGUI textMeshProUgui) adapter = new TextMeshProUGUIAdapter(textMeshProUgui);
+		if (component is TextMeshPro textMeshPro) adapter = new TextMeshProAdapter(textMeshPro);
 			
 		if (adapter != null) return caller.StartCoroutine(AlphaFader(adapter, speed, value, waitSecond, action));
 		else {
@@ -400,20 +413,28 @@ public interface IColorAdapter {
 	Color Color { get; set; }
 }
 
-public class ImageColorAdapter : IColorAdapter {
+public interface IRaycastTargetAdapter {
+	bool RaycastTarget { get; set; }
+}
+
+public class ImageAdapter : IColorAdapter, IRaycastTargetAdapter {
 	private Image image;
 
 	public Color Color {
 		get => image.color;
 		set => image.color = value;
 	}
+	public bool RaycastTarget {
+		get => image.raycastTarget;
+		set => image.raycastTarget = value;
+	}
 
-	public ImageColorAdapter(Image image) {
+	public ImageAdapter(Image image) {
 		this.image = image;
 	}
 }
 
-public class SpriteRendererColorAdapter : IColorAdapter {
+public class SpriteRendererAdapter : IColorAdapter {
 	private SpriteRenderer sRenderer;
 
 	public Color Color {
@@ -421,12 +442,12 @@ public class SpriteRendererColorAdapter : IColorAdapter {
 		set => sRenderer.color = value;
 	}
 
-	public SpriteRendererColorAdapter(SpriteRenderer sRenderer) {
+	public SpriteRendererAdapter(SpriteRenderer sRenderer) {
 		this.sRenderer = sRenderer;
 	}
 }
 	
-public class MeshRendererColorAdapter : IColorAdapter {
+public class MeshRendererAdapter : IColorAdapter {
 	private MeshRenderer mRenderer;
 
 	public Color Color {
@@ -434,46 +455,61 @@ public class MeshRendererColorAdapter : IColorAdapter {
 		set => mRenderer.material.color = value;
 	}
 
-	public MeshRendererColorAdapter(MeshRenderer mRenderer) {
+	public MeshRendererAdapter(MeshRenderer mRenderer) {
 		this.mRenderer = mRenderer;
 	}
 }
 
-public class TextColorAdapter : IColorAdapter {
+public class TextAdapter : IColorAdapter, IRaycastTargetAdapter {
 	private Text text;
 
 	public Color Color {
 		get => text.color;
 		set => text.color = value;
 	}
+	
+	public bool RaycastTarget {
+		get => text.raycastTarget;
+		set => text.raycastTarget = value;
+	}
 
-	public TextColorAdapter(Text text) {
+	public TextAdapter(Text text) {
 		this.text = text;
 	}
 }
 
-public class TextMeshProUGUIColorAdapter : IColorAdapter {
+public class TextMeshProUGUIAdapter : IColorAdapter, IRaycastTargetAdapter {
 	private TextMeshProUGUI text;
 
 	public Color Color {
 		get => text.color;
 		set => text.color = value;
 	}
+	
+	public bool RaycastTarget {
+		get => text.raycastTarget;
+		set => text.raycastTarget = value;
+	}
 
-	public TextMeshProUGUIColorAdapter(TextMeshProUGUI text) {
+	public TextMeshProUGUIAdapter(TextMeshProUGUI text) {
 		this.text = text;
 	}
 }
 
-public class TextMeshProColorAdapter : IColorAdapter {
+public class TextMeshProAdapter : IColorAdapter, IRaycastTargetAdapter {
 	private TextMeshPro text;
 
 	public Color Color {
 		get => text.color;
 		set => text.color = value;
 	}
-
-	public TextMeshProColorAdapter(TextMeshPro text) {
+	
+	public bool RaycastTarget {
+		get => text.raycastTarget;
+		set => text.raycastTarget = value;
+	}
+	
+	public TextMeshProAdapter(TextMeshPro text) {
 		this.text = text;
 	}
 }
