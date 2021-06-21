@@ -25,7 +25,10 @@ public class Egg : MonoBehaviour {
 		// Time.timeScale = 0.5f;
 	}
 
-	private void AddForce(float mult = 1){
+	private void AddForce(float mult = 1) {
+		AddVelocity();
+		return;
+		
 		trajectory.SetPoints(transform.position, transform.up * powerForce * mult);
 		trajectory.ShowTrajectory();
 		
@@ -33,6 +36,24 @@ public class Egg : MonoBehaviour {
 		moveCo = StartCoroutine(Move());
 		
 		// myRigidbody2D.AddForce(transform.up * powerForce * mult, ForceMode2D.Impulse);
+	}
+
+	private void AddVelocity() {
+		var targetPos = new Vector3(2, 16, 0);
+		var fromTo = targetPos - transform.position;
+		var fromToXZ = new Vector3(fromTo.x, 0, fromTo.z);
+
+		var x = fromToXZ.magnitude;
+		var y = fromTo.y;
+
+		var angleDeg = 45;
+		var angleRad = angleDeg * Math.PI / 180;
+		var g = Physics.gravity.y;
+
+		var v2 = (g * x * x) / (2 * (y - Math.Tan(angleRad) * x) * Math.Pow(Math.Cos(angleRad), 2));
+		var v = (float)Math.Sqrt(Math.Abs(v2));
+
+		myRigidbody2D.velocity = transform.forward * v;
 	}
 
 	private IEnumerator Move() {
