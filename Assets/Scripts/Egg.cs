@@ -119,11 +119,11 @@ public class Egg : MonoBehaviour {
 	}
 
 	public void Play(){
-		// myRigidbody2D.simulated = true;
+		 myRigidbody2D.simulated = true;
 	}
 
 	public void Stop(){
-		// myRigidbody2D.simulated = false;
+		 myRigidbody2D.simulated = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other){

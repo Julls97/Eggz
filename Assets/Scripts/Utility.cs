@@ -173,7 +173,26 @@ public static class Utility {
 			array[k] = temp;
 		}
 	}
-
+	public static Vector3 GetPointInCircle(Vector3 center, float radius, float angle)
+	{
+		float x = Mathf.Cos(angle * Mathf.Deg2Rad) * radius + center.x;
+		float y = Mathf.Sin(angle * Mathf.Deg2Rad) * radius + center.y;
+		return new Vector3(x, y, center.z);
+	}
+	public static T PickRandomFromList<T>(List<T> list)
+	{
+		int index = UnityEngine.Random.Range(0, list.Count);
+		return list[index];
+	}
+	public static float RandomRangeVector(Vector2 vector)
+	{
+		return UnityEngine.Random.Range(vector.x, vector.y);
+	}
+	public static Vector2 RandomRangeBetweenVectors(Vector2 vectorLower, Vector2 vectorUpper)
+	{
+		Vector2 output = new Vector2(UnityEngine.Random.Range(vectorLower.x, vectorUpper.x), UnityEngine.Random.Range(vectorLower.y, vectorUpper.y));
+		return output;
+	}
 	public static float Distance(this Transform from, Transform to) {
 		return Vector3.Distance(from.position, to.position);
 	}
