@@ -56,18 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Circle.cs" />
     <Compile Include="Assets\Scripts\SplineDone.cs" />
+    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\EggController.cs" />
     <Compile Include="Assets\InteractiveSportsSystem\SplineDone.cs" />
     <Compile Include="Assets\Scripts\FadeUI.cs" />
     <Compile Include="Assets\Scripts\Egg.cs" />
+    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Trajectory.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
-    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\GameManager.cs" />
     <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\EggManager.cs" />
-    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\EggController.cs" />
-    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\EggOutOfBoundsView.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

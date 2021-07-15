@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 namespace MainGame.Egg
 {
     public class EggController : MonoBehaviour
@@ -10,6 +12,18 @@ namespace MainGame.Egg
         [SerializeField] Vector2 randomForceAngle = new Vector2(-30, 30);
         [SerializeField] Vector2 endPoint =Vector2.zero;
         [SerializeField] float gravityScale = 0.5f;
+        [SerializeField] EggOutOfBoundsView outofBoundsView;
+        public UnityAction OnEggAppearOnSceen { get; set; }
+        public UnityAction OnEggDisappearOnSceen { get; set; }
+
+        private void OnBecameInvisible()
+        {
+            outofBoundsView.EnableView(true);
+        }
+        private void OnBecameVisible()
+        {
+            outofBoundsView.EnableView(false);
+        }
         bool locked = true;
         private void OnMouseDown()
         {
