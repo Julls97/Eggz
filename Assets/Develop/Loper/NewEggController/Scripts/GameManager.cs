@@ -24,10 +24,12 @@ namespace MainGame.Egg
         public void EnableMainMenu()
         {
             menuScreen.SetActive(true);
+            gameHolder.SetActive(false);
         }
         public void LaunchGame()
         {
             menuScreen.SetActive(false);
+            gameHolder.SetActive(true);
             eggManager.LaunchGame();
         }
         public void GameOver()

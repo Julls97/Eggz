@@ -153,7 +153,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 0.4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -191,9 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggRigitbody: {fileID: 4782537909182240004}
-  forceMult: 100
+  forceMult: 200
   randomForceAngle: {x: 120, y: 60}
   endPoint: {x: 0, y: 0}
-  gravityScale: 0.5
+  gravityScale: 1
   outOfBoundsView: {fileID: 0}
   addRotationRange: {x: -5, y: 5}
