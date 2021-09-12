@@ -717,6 +717,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 1
     Purchasing: 1
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -733,7 +734,7 @@ PlayerSettings:
   cloudProjectId: 4c70bdec-2964-4574-92c9-dbf2c310c36e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Egg
+  projectName: Eggz
   organizationId: julia_kirillova
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

@@ -65,6 +65,9 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\EggManager.cs" />
      <Compile Include="Assets\Develop\Loper\NewEggController\Scripts\OutOfBoundsViewManager.cs" />
+     <Compile Include="Assets\Scripts\Ads\AdsCore.cs" />
+     <Compile Include="Assets\Scripts\Ads\TestAds.cs" />
+     <Compile Include="Assets\Scripts\Ads\AdsRewarded.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -730,6 +733,15 @@
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
  <HintPath>D:/UnityProjects/Egg/Egg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>D:/UnityProjects/Egg/Egg/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/UnityProjects/Egg/Egg/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements.Editor">
+ <HintPath>D:/UnityProjects/Egg/Egg/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
