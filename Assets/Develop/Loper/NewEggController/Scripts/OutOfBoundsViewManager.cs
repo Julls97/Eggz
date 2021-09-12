@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using System.Linq;
-namespace MainGame.Egg
+
+namespace Develop.Loper.NewEggController.Scripts
 {
     public class OutOfBoundsViewManager : MonoBehaviour
     {

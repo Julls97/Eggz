@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace MainGame.Egg
+namespace Develop.Loper.NewEggController.Scripts
 {
     public class UIManager : MonoBehaviour
     {

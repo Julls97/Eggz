@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace MainGame.Egg
+namespace Develop.Loper.NewEggController.Scripts
 {
     public class GameManager : MonoBehaviour
     {
