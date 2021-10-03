@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PageBehaviourController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggOutOfBoundsView.cs" />
     <Compile Include="Assets\Scripts\Circle.cs" />
@@ -70,7 +71,8 @@
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggManager.cs" />
     <Compile Include="Assets\Scripts\OutOfBoundsViewManager.cs" />
-    <Compile Include="Assets\Scripts\PageBehaviourController.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\EggCosmeticData.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\CosmeticPickupRequirements.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3rd Party\TextMesh Pro\Shaders\TMPro.cginc" />
