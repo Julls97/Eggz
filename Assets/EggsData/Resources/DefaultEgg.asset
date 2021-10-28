@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4d08fc12b9dd14d84e1be4ba2fb862, type: 3}
   m_Name: DefaultEgg
   m_EditorClassIdentifier: 
-  cosmeticId: 
-  previewImage: {fileID: 0}
-  gameSprite: {fileID: 0}
+  cosmeticId: default
+  previewImage: {fileID: -1294591350713943780, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
+  gameSprite: {fileID: -1294591350713943780, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
+  cosmeticName: 

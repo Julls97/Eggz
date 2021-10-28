@@ -59,7 +59,9 @@
     <Compile Include="Assets\Scripts\PageBehaviourController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggOutOfBoundsView.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\EggCosmeticController.cs" />
     <Compile Include="Assets\Scripts\Circle.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\CosmeticPickupRequirements.cs" />
     <Compile Include="Assets\Scripts\SplineDone.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggController.cs" />
     <Compile Include="Assets\3rd Party\InteractiveSportsSystem\SplineDone.cs" />
@@ -67,12 +69,15 @@
     <Compile Include="Assets\Scripts\EggBehaviour\Egg.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Trajectory.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\CosmeticEnum.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\UICosmeticCellItem.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\EggCosmeticData.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggManager.cs" />
+    <Compile Include="Assets\Scripts\Cosmetic\GlobalCosmetiicManager.cs" />
     <Compile Include="Assets\Scripts\OutOfBoundsViewManager.cs" />
-    <Compile Include="Assets\Scripts\Cosmetic\EggCosmeticData.cs" />
-    <Compile Include="Assets\Scripts\Cosmetic\CosmeticPickupRequirements.cs" />
+    <Compile Include="Assets\Scripts\ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3rd Party\TextMesh Pro\Shaders\TMPro.cginc" />

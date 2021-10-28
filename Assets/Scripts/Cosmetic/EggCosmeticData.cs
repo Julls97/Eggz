@@ -10,5 +10,7 @@ namespace EggNamespace.Cosmetic
         public string cosmeticId;
         public Sprite previewImage;
         public Sprite gameSprite;
+        public string cosmeticName;
+       // public EggCosmeticAvailability eggCosmeticAvailability;
     }
 }
