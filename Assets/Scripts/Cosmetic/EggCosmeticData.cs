@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace EggNamespace.Cosmetic
 {
+    [System.Serializable]
     [CreateAssetMenu(fileName ="New egg data",menuName = "Egg")]
     public class EggCosmeticData : ScriptableObject
     {
@@ -11,6 +12,8 @@ namespace EggNamespace.Cosmetic
         public Sprite previewImage;
         public Sprite gameSprite;
         public string cosmeticName;
+        public UnlockRequirement unlockRequirement;
+        public string unlockDescription;
        // public EggCosmeticAvailability eggCosmeticAvailability;
     }
 }

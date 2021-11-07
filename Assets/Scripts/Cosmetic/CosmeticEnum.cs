@@ -5,10 +5,16 @@ namespace EggNamespace.Cosmetic
 {
     public enum EggCosmeticAvailability
     {
-        Current,
-        Avalable,
-        CanBeUnlocked,
+        Unlocked,
         Locked
     }
- 
+    
+    public enum UnlockRequirement
+    {
+        None,
+        TapAction, //Watch ad, etc
+        Challange
+    }
+
+
 }

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4d08fc12b9dd14d84e1be4ba2fb862, type: 3}
   m_Name: Dotted
   m_EditorClassIdentifier: 
-  cosmeticId: default
+  cosmeticId: dotted
   previewImage: {fileID: -7726898640073310857, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
   gameSprite: {fileID: -7726898640073310857, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
-  cosmeticName: 
+  cosmeticName: _watch ad
+  unlockRequirement: 1
+  unlockDescription: 

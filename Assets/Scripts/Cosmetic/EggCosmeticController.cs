@@ -13,18 +13,27 @@ namespace EggNamespace.Cosmetic
         public void InitializeCosmetic()
         {
             ClearCosmeticOnPanel();
-            List<EggCosmeticData> cosmeticDataList = GlobalCosmetiicManager.Instance.GetDataList();
-            foreach (EggCosmeticData cosmeticData in cosmeticDataList)
+            List<EggAvailabilityWrapper> cosmeticWrapedDataList = GlobalCosmeticManager.Instance.GetDataList();
+            foreach (EggAvailabilityWrapper cosmeticDataWraped in cosmeticWrapedDataList)
             {
                 UICosmeticCellItem cellItem = Instantiate(cosmeticCellPrefab, scrollableContent);
-                cellItem.SetUp(cosmeticData, () => OnSomeItemPicked(cellItem));
+                cellItem.SetUp(cosmeticDataWraped, () => OnSomeItemPicked(cosmeticDataWraped));
                 cosmeticOnPanel.Add(cellItem);
             }
+            HighlightItem(GlobalCosmeticManager.Instance.CurrentCosmetic);
         }
-        private void OnSomeItemPicked(UICosmeticCellItem item)
+        private void HighlightItem(EggAvailabilityWrapper item)
         {
-            GlobalCosmetiicManager.Instance.SetNewCurrentCosmetic(item.GetCosmeticData());
-            Debug.Log("Picked " + item.name);
+            cosmeticOnPanel.ForEach(i => i.HighlightItem(i.CurrentEggCosmeticDataWraped == item));
+        }
+        private void OnSomeItemPicked(EggAvailabilityWrapper item)
+        {
+            if (GlobalCosmeticManager.Instance.SetNewCurrentCosmetic(item))
+            {
+                HighlightItem(item);
+                Debug.Log("Picked " + item.CosmeticDataID);
+            }
+
         }
         private void ClearCosmeticOnPanel()
         {
@@ -35,6 +44,6 @@ namespace EggNamespace.Cosmetic
         {
             InitializeCosmetic();
         }
-        
+
     }
 }

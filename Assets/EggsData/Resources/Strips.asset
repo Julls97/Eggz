@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4d08fc12b9dd14d84e1be4ba2fb862, type: 3}
   m_Name: Strips
   m_EditorClassIdentifier: 
-  cosmeticId: default
+  cosmeticId: strips
   previewImage: {fileID: 3349958879653729531, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
   gameSprite: {fileID: 3349958879653729531, guid: e755ca43af822694b87cf16b2685cf16, type: 3}
   cosmeticName: 
+  unlockRequirement: 1
+  unlockDescription: 
