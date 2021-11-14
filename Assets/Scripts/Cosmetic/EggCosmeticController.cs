@@ -10,6 +10,7 @@ namespace EggNamespace.Cosmetic
         [SerializeField] private UICosmeticCellItem cosmeticCellPrefab;
 
         [SerializeField] private Transform scrollableContent;
+
         public void InitializeCosmetic()
         {
             ClearCosmeticOnPanel();
@@ -35,15 +36,19 @@ namespace EggNamespace.Cosmetic
             }
 
         }
+        public void SaveData()
+        {
+            GlobalCosmeticManager.Instance.SaveData();
+        }
         private void ClearCosmeticOnPanel()
         {
             ExtensionMethods.DisposeObjects(cosmeticOnPanel.Select(g => g.gameObject).ToList());
             cosmeticOnPanel.Clear();
         }
-        private void Start()
+        public void OnOpen()
         {
             InitializeCosmetic();
         }
 
-    }
+}
 }

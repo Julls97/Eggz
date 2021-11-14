@@ -98,7 +98,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 334
       y: 4
       width: 293
       height: 390
@@ -112,7 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -709, y: -552}
+    uvTransform: {x: -379, y: -552}
   - name: RedAndWhiteStrips
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -120,7 +120,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 305
+      x: 635
       y: 4
       width: 293
       height: 390
@@ -134,7 +134,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -63, y: -552}
+    uvTransform: {x: 267, y: -552}
   - name: WhiteEgg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -142,8 +142,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 606
-      y: 4
+      x: 4
+      y: 423
       width: 293
       height: 390
     spriteID: dfa0540b43f944c44918ab156dd08ef7
@@ -156,7 +156,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 584, y: -552}
+    uvTransform: {x: -18, y: -133}
+  - name: GreenDots
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 322
+      height: 411
+    spriteID: 74d8832413838a64a9221125b68768ae
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -347, y: -83}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -176,27 +198,34 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: GreenDots
+    spriteName: GreenDots
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 74d8832413838a64a9221125b68768ae
+    layerID: 15
+    mosaicPosition: {x: 4, y: 4}
   - name: RedAndWhiteDots
     spriteName: RedAndWhiteDots
     isGroup: 0
     parentIndex: -1
     spriteID: 269aae8450ef6d34a9e8ad8b6d8e80ce
     layerID: 7
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 334, y: 4}
   - name: RedAndWhiteStrips
     spriteName: RedAndWhiteStrips
     isGroup: 0
     parentIndex: -1
     spriteID: ab4cf0f928c575d41878963581a56cd6
     layerID: 5
-    mosaicPosition: {x: 305, y: 4}
+    mosaicPosition: {x: 635, y: 4}
   - name: WhiteEgg
     spriteName: WhiteEgg
     isGroup: 0
     parentIndex: -1
     spriteID: dfa0540b43f944c44918ab156dd08ef7
     layerID: 3
-    mosaicPosition: {x: 606, y: 4}
+    mosaicPosition: {x: 4, y: 423}
   characterData:
     bones: []
     parts: []

@@ -20,7 +20,7 @@ namespace EggNamespace.Cosmetic
             if (cosmeticSerialization.LoadCosmeticData() == false)
             {
                 Debug.Log("First launch. Creating cosmetic save");
-                cosmeticSerialization.SaveCosmeticData(cosmeticSerizlizedData);
+                SaveData();
             }
         }
         private void LoadData()
@@ -41,6 +41,10 @@ namespace EggNamespace.Cosmetic
                 }
             }
             SetNewCurrentCosmetic(cosmeticSerizlizedData.PickedEggCosmeticID);
+        }
+        public void SaveData()
+        {
+            cosmeticSerialization.SaveCosmeticData(cosmeticSerizlizedData);
         }
 
         private void Awake()
@@ -72,10 +76,11 @@ namespace EggNamespace.Cosmetic
                     currentCosmetic.IsCurrentItem = false;
                 currentCosmetic = newCosmetic;
                 currentCosmetic.IsCurrentItem = true;
+                cosmeticSerizlizedData.PickedEggCosmeticID = cosmeticSerizlizedData.EggAvailabilityWrapperList.IndexOf(currentCosmetic);
                 return true;
             }
             else
-                Debug.LogError("New Cosmetic property was null or cantBePicked");
+                Debug.LogWarning("New Cosmetic property was null or cantBePicked");
             return false;
 
         }

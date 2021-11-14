@@ -9,7 +9,7 @@ namespace EggNamespace.Cosmetic
     [System.Serializable]
     public class EggAvailabilityWrapper
     {
-        [SerializeField] private bool isCurrentItem = false;
+        private bool isCurrentItem = false;
         public bool IsCurrentItem { get => isCurrentItem; set => isCurrentItem = value; }
         [SerializeField] private string cosmeticDataID;
         public string CosmeticDataID { get => cosmeticDataID; set => cosmeticDataID = value; }

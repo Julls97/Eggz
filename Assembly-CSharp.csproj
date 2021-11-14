@@ -53,7 +53,6 @@
     <UnityVersion>2020.3.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PageBehaviourController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggOutOfBoundsView.cs" />
     <Compile Include="Assets\Scripts\Cosmetic\EggCosmeticController.cs" />
@@ -64,6 +63,7 @@
     <Compile Include="Assets\Scripts\SplineDone.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\EggController.cs" />
     <Compile Include="Assets\3rd Party\InteractiveSportsSystem\SplineDone.cs" />
+    <Compile Include="Assets\Scripts\DataSerializer.cs" />
     <Compile Include="Assets\Scripts\FadeUI.cs" />
     <Compile Include="Assets\Scripts\EggBehaviour\Egg.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -76,7 +76,8 @@
     <Compile Include="Assets\Scripts\EggBehaviour\EggManager.cs" />
     <Compile Include="Assets\Scripts\Cosmetic\GlobalCosmeticManager.cs" />
     <Compile Include="Assets\Scripts\OutOfBoundsViewManager.cs" />
-    <Compile Include="Assets\Scripts\DataSerializer.cs" />
+    <Compile Include="Assets\Scripts\UI\ViewControllerBase.cs" />
+    <Compile Include="Assets\Scripts\UI\SimpleViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rd Party\TextMesh Pro\Shaders\TMPro.cginc" />
